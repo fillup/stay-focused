@@ -1,0 +1,12 @@
+[Unit]
+Description=Stay Focused - Keep your camera focused
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/local/bin/stay-focused -v4l2
+
+[Install]
+WantedBy=multi-user.target
